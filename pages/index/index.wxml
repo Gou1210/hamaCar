@@ -1,0 +1,181 @@
+<view class="map-container">
+  <block wx:if="{{nickName}}">
+    <image bindtap="toLink" data-url="mine" mode="widthFix" class="headMap" src="{{avatarUrl}}">
+    </image>
+    <span bindtap="toLink" data-url="mine" class="nameMap">{{nickName}}</span>
+  </block>
+  <block wx:if="{{!nickName}}">
+    <image bindtap="toLink" data-url="mine" mode="widthFix" class="headMap" src="../../static/img/mine/touxiang.png">
+    </image>
+    <button class="nameMap loginBtn" >未登录</button>
+  </block>
+
+  <cover-view class="title">
+   <cover-view>蛤蟆洗车</cover-view>
+   <cover-view class="englinsh">Hama wCar</cover-view>
+  </cover-view>
+   <!-- 大头针 -->
+   <view class="spot" >
+      <view class="spot-contnet {{!mapContentText?'spot-ani':'spot-over'}}">{{mapContentText}}</view>
+      <view class="spot-line"></view>
+  </view>
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{mapScale}}" bindcontroltap="controltap"
+    markers="{{markers}}" controls="{{controls}}" bindmarkertap="markertap" bindregionchange="regionchange"
+    show-location polyline="{{polyline}}"
+    enable-building
+ style="height:{{selectHeight}}"></map>
+    <!-- bindregionchange="mapChange" -->
+</view>
+
+<view class="selectBox">
+  <view hidden="{{status!=0&&status!=1}}">
+    <homeTabs status='{{status}}' binditemChange="handleItemChange" />
+  </view>
+  <view wx:if="{{status==3}}" class="selectTitle">
+    <span>选择您的洗护类型</span>
+    <span bindtap="backStatus" class="shut">X</span>
+  </view>
+  <view wx:if="{{status==4}}" class="selectTitle">
+    <span>等待接单</span>
+    <!-- <span bindtap="backStatus" class="shut">X</span> -->
+  </view>
+  <view wx:if="{{status==5}}" class="selectTitle">
+    <p>已接单</p>
+    <!-- <span bindtap="backStatus" class="shut">X</span> -->
+  </view>
+  <view wx:if="{{status==6}}" class="selectTitle">
+    <p>已到达:</p>
+    <!-- <span class="yimiao">疫苗已接种</span> -->
+    <!-- <span bindtap="backStatus" class="shut">X</span> -->
+  </view>
+
+  <view class="formBox">
+    <!-- 快捷洗车模块 -->
+    <view class="whiteBox" wx:if="{{status==0||status==1}}">
+      <view bindtap='getLocation' wx:if="{{status==0}}" class="sheet  address">
+        <span class="caption dwxc">洗车地点:</span>
+
+        <text class="gut xichedidian">{{carForm.locationArea}}</text>
+      </view>
+      <view bindtap="toLink" data-url='carInfo' class="sheet info">
+        <span class="caption">车辆信息:</span>
+        <view class="right">
+          <input disabled class="gut" type="text" value="{{carForm.plateNumber}}" placeholder="请选择车辆类型" />
+          <van-icon size="20rpx" color="999" name="arrow" />
+        </view>
+
+      </view>
+      <view bindtap="changeStatus" data-status='3' class="sheet type">
+        <span class="caption">洗护类型:</span>
+        <view class="right">
+          <input disabled class="gut" type="text" value="{{carForm.washProtectText}}" placeholder="请选择洗护类型" />
+          <van-icon size="20rpx" color="999" name="arrow" />
+        </view>
+      </view>
+      <view bindtap="toLink" data-url='parkInfo' class="sheet  site">
+        <span class="caption">详细位置:</span>
+        <!-- <picker class="pullDown" bindchange="bindPickerChange" value="{{index}}" range="{{topBottom}}">
+          <span class="name">{{carForm.locationFloor}}</span>
+          <van-icon size="20rpx" color="999" name="arrow-down" />
+        </picker> -->
+        <view class="right">
+          <input disabled class="gut" type="text" value="{{carForm.locationFloor}}{{carForm.locationDetail}}" bindchange="changeLocationDetail" placeholder="车位号或详细地点" />
+        </view>
+      </view>
+
+      <!-- 已开通 -->
+      <view wx:if="{{dredge}}" class="price">
+        <text class="current">¥{{carForm.price}}</text>
+        <text wx:if="{{isCoupon}}" class="original">{{carForm.original}}</text>
+        <text wx:if="{{isCoupon}}" class="discount">优惠券抵扣20元</text>
+        <view wx:if="{{status==0}}" class="drop" bindtap='drop'>上门洗车</view>
+        <view wx:if="{{status==1}}" class="drop" bindtap='onScanCode'>上门洗车</view>
+      </view>
+      <!-- 未开通 -->
+      <view wx:if="{{!dredge}}" class="price dredge">
+        <view class="drop">未开通服务</view>
+      </view>
+    </view>
+    <!-- 上门洗车模块结束 -->
+    <!-- 洗护类型 -->
+    <view class="whiteBox" wx:if="{{status==3}}">
+      <view class="washBtnBox">
+        <view  wx:for="{{washBtn}}" bindtap="washItemTap" wx:key="{{item.dictLabel}}" data-index="{{index}}"
+          class="washBtn {{item.isActive?'active':''}}">
+          {{item.dictLabel}}
+        </view>
+        <view class="fuwu" wx:for="{{washText}}" wx:key="index">
+        <view class="fuwulist">
+          <span class="dian">●</span>
+         <span>{{item}}</span>
+        </view>
+        </view>
+      </view>
+    </view>
+    <!-- 洗护类型模块结束 -->
+    <!-- 等待接单模块 -->
+    <view class="whiteBox" wx:if="{{status==4}}">
+      <view class="wait"><span class="didianhuanhang">洗车地点:</span><span class="xichedidian">{{carForm.locationArea}}</span></view>
+      <view class="wait"><span>车辆类型:</span><span>{{carForm.carTypeText}}</span></view>
+        <view wx:if="{{!carForm.washProtectName}}" class="wait"><span>洗护类型:</span><span>{{carForm.washProtectText}}</span></view>
+      <view  wx:if="{{carForm.washProtectName}}" class="wait"><span>洗护类型:</span><span>{{carForm.washProtectName}}</span></view>
+      <!-- <view class="wait"><span>联系人:</span><span>{{carForm.name}}</span></view> -->
+      <view class="wait"><span>联系电话:</span><span>{{carForm.phone}}</span></view>
+      <view class="wait"><span>车位信息:</span><span>{{carForm.locationFloor}}{{carForm.locationDetail}}</span></view>
+      <view class="wait"><span>车牌号码:</span><span>{{carForm.plateNumber}}</span></view>
+      <view class="wait"><span>订单金额:</span><span class="priceWait">¥{{carForm.price}}</span></view>
+    </view>
+    <!-- 等待接单模块结束 -->
+    <!-- 已经接单模块 -->
+    <view class="whiteBox" wx:if="{{status==5}}">
+      <view class="nickname">
+        <image mode="widthFix" class="head" src="../../static/img/home/xichexiatouxiang.png"></image>
+        <p>洗车侠:<span class="yimiao">疫苗已接种</span></p>
+      </view>
+
+    <span bindtap="toLink" data-url="mine" class="nameMap"></span>
+      <view class="wait"><span>预计到达时间:</span><span>{{receivedOrder.duration}}分</span></view>
+      <view wx:if="{{receivedOrder.distanceMeter<1000}}" class="wait"><span>距离洗车地点:</span><span>{{receivedOrder.distanceMeter}}米</span></view>
+      <view wx:if="{{receivedOrder.distanceMeter>=1000}}" class="wait"><span>距离洗车地点:</span><span>{{receivedOrder.distanceKm}}公里</span></view>
+      <view class="wait"><span>洗车状态:</span><span class="priceWait">已接单</span></view>
+    </view>
+    <!--已经接单模块结束 -->
+    <!-- 到达模块 -->
+    <view class="whiteBox" wx:if="{{status==6}}">
+      <view class="nickname">
+        <image mode="widthFix" class="head" src="../../static/img/home/xichexiatouxiang.png"></image>
+        <p>洗车侠:<span class="yimiao">疫苗已接种</span></p>
+      </view>
+      <view class="wait"><span>洗车状态:</span>
+      <span  class="priceWait">
+      <block wx:if="{{lastOrder.orderStatus==3}}">
+        洗车中
+      </block>
+      <block wx:if="{{lastOrder.orderStatus==4}}">
+        结束洗车
+      </block>
+      </span>
+      </view>
+    </view>
+    <!--到达模块结束 -->
+  </view>
+  <!-- 洗护类型 -->
+  <view wx:if="{{status==3}}" bindtap="washVerify" class="washVerify">确认</view>
+  <!-- 洗护类型模块结束 -->
+  <!-- 取消订单 -->
+  <view wx:if="{{status==4}}" data-Effect="cancel" bindtap="backStatus" class="washVerify">取消订单</view>
+  <!-- 取消订单模块结束 -->
+  <!-- 已接单或者已到达 -->
+  <view wx:if="{{status==5}}" bindtap="contactMaster" class="washVerify">联系洗车侠</view>
+  <!-- 已接单结束 -->
+  <!-- 已接单或者已到达 -->
+  <view wx:if="{{lastOrder.orderStatus==3}}"  class="washVerify">洗车侠已拿到钥匙</view>
+  <view wx:if="{{lastOrder.orderStatus==4&&lastOrder.orderType==1}}" bindtap="finishOrder" class="washVerify">结束洗车</view>
+  <view wx:if="{{lastOrder.orderStatus==4&&lastOrder.orderType==2&&lastOrder.carKeyStatus==3}}" bindtap="takeKey" class="washVerify">取出钥匙</view>
+  <view wx:if="{{lastOrder.orderStatus==4&&lastOrder.orderType==2&&lastOrder.carKeyStatus==4}}" bindtap="finishOrder" class="washVerify">结束洗车</view>
+  <!-- 已接单结束 -->
+  <!-- 上门洗车模块 -->
+  <image wx:if="{{status==0||status==1}}"  bindtap="couponTap" class="youhui" src="../../static/img/home/youhui.png">
+  </image>
+  <!-- 上门洗车模块结束 -->
+</view>

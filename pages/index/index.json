@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "homeTabs": "../../components/homeTabs/homeTabs" ,
+    "van-image": "@vant/weapp/image/index",
+    "van-icon": "@vant/weapp/icon/index"
+  },
+    "navigationStyle": "custom"
+}

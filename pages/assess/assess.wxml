@@ -1,0 +1,59 @@
+<view class="orderList">
+  <view class="orderBox">
+  <view class="top">
+    <view class="left">
+    <view  class="conditionBtn">评价</view>
+   <p class="washPattern" ><span class="title">{{orderForm.orderType=='1'?'快捷洗车':'智能柜洗车'}}</span><span class="time">（{{orderForm.createTime}}）</span></p>
+  </view>
+  <!-- <image src="../../static/img/mine/back.png"></image> -->
+  </view>
+
+  <view class="middle">
+    <view class="left">
+    <view class="brand">{{orderForm.plateNumber}}</view>
+   <p class="address">洗车地点：{{orderForm.locationArea}}</p>
+  </view>
+  <p class="price">¥{{orderForm.price}}</p>
+  </view>
+
+  <view class="bottom">
+    <p class="carType">车辆类型：{{orderForm.carTypeText}}</p>
+    <p class="washType">洗护类型：{{orderForm.washProtectName}}</p>
+    <p bindtap="cancelOrder" wx:if="{{orderForm.orderStatus==1}}"  class="cancel">点此取消订单</p>
+  </view>
+</view>
+
+  <view class="connect">
+    <view class="one"></view>
+    <view class="two"></view>
+  </view>
+
+  <view class="assessBox">
+    <p class="starText">
+      <span class="xingjipingjia">星级评价：</span>
+      <span>一星为差</span>
+      <span>二星为中</span>
+      <span>三星为好</span>
+    </p>
+
+    <view class="starHama">
+      <span class="title">蛤蟆洗车：</span>
+      <van-rate color="#F0D208" count="{{ 3 }}" value="{{orderForm.evaluateCompany }}" bind:change="onHamaStart" />
+    </view>
+
+    <view class="starXichexia">
+      <span class="title">洗车侠：</span>
+      <van-rate color="#F0D208" count="{{ 3 }}" value="{{orderForm.evaluatePerson }}" bind:change="onXiaStart" />
+    </view>
+
+
+    <p class="assessTitle">文字评价：</p>
+    <view class="assessText">
+      <van-cell-group>
+        <van-field value="{{ orderForm.evaluateContent }}" type="textarea" placeholder="请输入留言" autosize bindchange="onMessage" border="{{ false }}" />
+      </van-cell-group>
+    </view>
+  </view>
+</view>
+<view bindtap="putAssess" wx:if="{{!orderForm.isEvaluatePerson }}" class="submit">提交</view>
+<view bindtap="close" wx:if="{{ orderForm.isEvaluatePerson }}" class="submit">关闭</view>

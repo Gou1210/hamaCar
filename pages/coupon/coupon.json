@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "couponTab": "../../components/couponTab/couponTab" ,
+    "van-empty": "@vant/weapp/empty/index"
+  },
+  "navigationBarTitleText": "我的优惠券"
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-transition": "@vant/weapp/transition/index",
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "navigationBarTitleText": "添加车位信息"
+}

@@ -1,0 +1,37 @@
+<view class="orderList">
+  <view  wx:for="{{orderList}}" bindtap="toDetail" data-orderform="{{item}}" data-orderId="{{item.orderId}}" data-url="orderDetail" wx:key="orderId"  class="orderBox">
+  <view class="top">
+    <view class="left">
+    <view class="conditionBtn">已完成</view>
+   <p class="washPattern" ><span class="title">{{item.orderType=='1'?'快捷洗车':'智能柜洗车'}}</span><span class="time">({{item.createTime}})</span></p>
+  </view>
+  <image src="../../static/img/mine/back.png"></image>
+  </view>
+
+  <view class="middle">
+    <view class="left">
+    <view class="brand">{{item.plateNumber}}</view>
+   <p class="address">洗车地点：{{item.locationFloor}}{{item.locationDetail}}</p>
+  </view>
+  <p class="price">¥{{item.price}}</p>
+  </view>
+
+  <view class="bottom">
+    <p class="carType">车辆类型：{{item.carTypeText}}</p>
+    <p class="washType">洗护类型：{{item.washProtectName}}</p>
+    <p catchtap="toAssess" data-url="assess" class="cancel">{{item.evaluatePerson?'查看评价':'去评价'}}</p>
+    <!-- <p catchtap="toAssess" data-url="assess" class="cancel">{{item.phone}}</p> -->
+  </view>
+  <ul wx:if="{{item.washProtectName=='精致外洗'}}" class="fuwu">
+  <li wx:for="{{outList}}" wx:key="subItem" wx:for-item="subItem">
+    <text>{{subItem}}</text><van-icon color="#79FF79" name="checked" />
+  </li>
+  </ul>
+  <ul wx:if="{{item.washProtectName=='全车洗护'}}" class="fuwu">
+  <li wx:for="{{globalList}}"  wx:key="subItem" wx:for-item="subItem">
+    <text>{{subItem}}</text><van-icon color="#79FF79" name="checked" />
+  </li>
+  </ul>
+</view>
+</view>
+

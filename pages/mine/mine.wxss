@@ -1,0 +1,173 @@
+page {
+  background: #F0F4F8;
+}
+
+.top {
+  height: 270rpx;
+  background-color: #F0D208;
+}
+
+.nickname {
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  margin-left: 30rpx;
+}
+
+.head {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.nickname span {
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #000000;
+  font-size: 26rpx;
+}
+
+.bottom {
+  margin-top: -50rpx;
+  height: 800rpx;
+  border-top-left-radius: 50rpx;
+  border-radius: 50rpx;
+  background: #F0F4F8;
+  padding: 40rpx 20rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tenor {
+  width: 620rpx;
+  height: 195rpx;
+  background: #FFFFFF;
+  border-radius: 50rpx;
+  display: flex;
+  font-size: 26rpx;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 37rpx;
+}
+
+.tenorBox {
+  width: 132rpx;
+  height: 160rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+.tenorBox image{
+  width: 132rpx;
+  height: 130rpx;
+}
+.number{
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  background-color: #ee0a24;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  position: absolute;
+  left: 100rpx;
+  top: 10rpx;
+}
+
+.tenor image {
+  width: 132rpx;
+}
+
+.tenor p {
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+}
+
+.give{
+margin-top: 30rpx;
+width: 690rpx;
+height: 518rpx;
+background: #FFFFFF;
+border-radius: 50rpx;
+padding: 0 39rpx;
+}
+
+.giveBox{
+  display: flex;
+  justify-content: space-between;
+  height: 103rpx;
+  align-items: center;
+  border-bottom: 1px solid #DDDDDD;
+}
+.giveBox .left{
+  display: flex;
+  align-items: center;
+}
+.giveBox p{
+font-family: Microsoft YaHei;
+font-weight: 400;
+color: #333333;
+text-align: left;
+line-height: 100%;
+}
+.giveBox .tubiao{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.giveBox .arrow{
+  width: 13rpx;
+}
+.lastGive{
+  border-bottom: none;
+}
+.quit{
+  margin-top: 50rpx;
+  width: 630rpx;
+  height: 88rpx;
+  background: #F0D208;
+  border-radius: 25rpx;
+  font-size: 28rpx;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  line-height: 88rpx;
+}
+.loginBtn{
+  width: 200rpx !important;
+  margin: 0 !important;
+  background-color: #F0D208;
+}
+.contact{
+  padding: 0 !important;
+  width: 500rpx !important;
+  background-color: #fff;
+  font-family: Microsoft YaHei;
+  font-weight: 400 !important;
+  color: #333333;
+  font-size:32rpx !important;
+  text-align: start;
+}
+.kefudianhua{
+  width: 500rpx;
+  /* background-color: red; */
+}
+.run{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+  margin-right: 30rpx;
+}
+.phone{
+  width: 40rpx !important;
+  height: 40rpx !important;
+  margin-left: 10rpx;
+  margin-right: 30rpx;
+}

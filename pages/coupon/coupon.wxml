@@ -1,0 +1,23 @@
+<!--pages/coupon/coupon.wxml-->
+<couponTab tabs="{{tabs}}" binditemChange="handleItemChange" ></couponTab>
+<view class="content">
+<block wx:if="{{tabs[0].isActive}}"> 
+  <block wx:if="{{unuserCouponList.length!=0}}">
+    <image wx:key="index" wx:for="{{unuserCouponList}}"  mode="widthFix" class="youhui" src="../../static/img/home/youhui.png"></image>
+  </block>
+  <block wx:if="{{unuserCouponList.length==0}}">
+    <van-empty  description="暂无可用优惠券" />
+  </block>
+ </block>
+<block wx:if="{{tabs[1].isActive}}">
+  <block wx:if="{{userCouponList.length<0}}">
+    <image wx:for="{{userCouponList}}"  mode="widthFix" class="youhui" src="../../static/img/home/youhui.png"></image>
+  </block>
+  <block wx:if="{{userCouponList.length==0}}">
+    <van-empty  description="暂无已用优惠券" />
+  </block>
+ </block>
+<block wx:if="{{tabs[2].isActive}}">
+  <van-empty  description="暂无已过期优惠券" />
+ </block>
+</view>

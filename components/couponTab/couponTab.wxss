@@ -1,0 +1,21 @@
+.tabs{
+  
+}
+.tabs_title{
+  display: flex;
+  padding: 10rpx ;
+  padding-left: 20rpx;
+  background-color: #fff;
+}
+.title_item{
+padding: 8rpx 26rpx;
+height: 43rpx;
+line-height: 43rpx;
+background: #F0F4F8;
+border-radius: 15rpx;
+font-size: 24rpx;
+margin-right: 60rpx;
+}
+.active{
+  background-color: #EEC522;
+}

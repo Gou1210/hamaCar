@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/carInfo/carInfo",
+    "pages/addCarInfo/addCarInfo",
+    "pages/pendorder/pendorder",
+    "pages/serviceorder/serviceorder",
+    "pages/finishorder/finishorder",
+    "pages/refundorder/refundorder",
+    "pages/coupon/coupon",
+    "pages/assess/assess",
+    "pages/addPark/addPark",
+    "pages/parkInfo/parkInfo",
+    "pages/orderDetail/orderDetail",
+    "pages/test/test",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "蛤蟆洗车",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f0f4f8"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "地理位置将帮助我们为您提供更好的服务。" 
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

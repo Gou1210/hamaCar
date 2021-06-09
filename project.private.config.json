@@ -1,0 +1,486 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/way/way",
+          "pathName": "pages/way/way",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/carinfo/carinfo",
+          "pathName": "pages/carinfo/carinfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/pendorder/pendorder",
+          "pathName": "pages/pendorder/pendorder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/coupon/coupon",
+          "pathName": "pages/coupon/coupon",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/finishorder/finishorder",
+          "pathName": "pages/finishorder/finishorder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/assess/assess",
+          "pathName": "pages/assess/assess",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/coupon/coupon",
+          "pathName": "pages/coupon/coupon",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addPark/addPark",
+          "pathName": "pages/addPark/addPark",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myCar/myCar",
+          "pathName": "pages/myCar/myCar",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/carInfo/carInfo",
+          "pathName": "pages/carInfo/carInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addPark/addPark",
+          "pathName": "pages/addPark/addPark",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/parkInfo/parkInfo",
+          "pathName": "pages/parkInfo/parkInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/orderDetail/orderDetail",
+          "pathName": "pages/orderDetail/orderDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addCarInfo/addCarInfo",
+          "pathName": "pages/addCarInfo/addCarInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/assess/assess",
+          "pathName": "pages/assess/assess",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/carInfo/carInfo",
+          "pathName": "pages/carInfo/carInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addCarInfo/addCarInfo",
+          "pathName": "pages/addCarInfo/addCarInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addCarInfo/addCarInfo",
+          "pathName": "pages/addCarInfo/addCarInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addCarInfo/addCarInfo",
+          "pathName": "pages/addCarInfo/addCarInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/carInfo/carInfo",
+          "pathName": "pages/carInfo/carInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/parkInfo/parkInfo",
+          "pathName": "pages/parkInfo/parkInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addPark/addPark",
+          "pathName": "pages/addPark/addPark",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/coupon/coupon",
+          "pathName": "pages/coupon/coupon",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addCarInfo/addCarInfo",
+          "pathName": "pages/addCarInfo/addCarInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/orderDetail/orderDetail",
+          "pathName": "pages/orderDetail/orderDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addCarInfo/addCarInfo",
+          "pathName": "pages/addCarInfo/addCarInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/carInfo/carInfo",
+          "pathName": "pages/carInfo/carInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addCarInfo/addCarInfo",
+          "pathName": "pages/addCarInfo/addCarInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/carInfo/carInfo",
+          "pathName": "pages/carInfo/carInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/orderDetail/orderDetail",
+          "pathName": "pages/orderDetail/orderDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addCarInfo/addCarInfo",
+          "pathName": "pages/addCarInfo/addCarInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/orderDetail/orderDetail",
+          "pathName": "pages/orderDetail/orderDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/carInfo/carInfo",
+          "pathName": "pages/carInfo/carInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/carInfo/carInfo",
+          "pathName": "pages/carInfo/carInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addPark/addPark",
+          "pathName": "pages/addPark/addPark",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/assess/assess",
+          "pathName": "pages/assess/assess",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/parkInfo/parkInfo",
+          "pathName": "pages/parkInfo/parkInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/parkInfo/parkInfo",
+          "pathName": "pages/parkInfo/parkInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/parkInfo/parkInfo",
+          "pathName": "pages/parkInfo/parkInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/orderDetail/orderDetail",
+          "pathName": "pages/orderDetail/orderDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/pendorder/pendorder",
+          "pathName": "pages/pendorder/pendorder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/pendorder/pendorder",
+          "pathName": "pages/pendorder/pendorder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addCarInfo/addCarInfo",
+          "pathName": "pages/addCarInfo/addCarInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/assess/assess",
+          "pathName": "pages/assess/assess",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/test/test",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/orderDetail/orderDetail",
+          "pathName": "pages/orderDetail/orderDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/finishorder/finishorder",
+          "pathName": "pages/finishorder/finishorder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/carInfo/carInfo",
+          "pathName": "pages/carInfo/carInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addPark/addPark",
+          "pathName": "pages/addPark/addPark",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/carInfo/carInfo",
+          "pathName": "pages/carInfo/carInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/carInfo/carInfo",
+          "pathName": "pages/carInfo/carInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/finishorder/finishorder",
+          "pathName": "pages/finishorder/finishorder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/finishorder/finishorder",
+          "pathName": "pages/finishorder/finishorder",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

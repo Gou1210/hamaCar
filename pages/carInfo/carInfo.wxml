@@ -1,0 +1,86 @@
+
+<swiper previous-margin="30rpx" next-margin="30rpx"  wx:if="{{carList.length>0}}" class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+  duration="{{duration}}" circular="{{circular}}" indicator-color="rgba(250, 250, 250, .3)"
+  indicator-active-color="white" bindchange="onChange">
+
+  <block wx:for="{{carList}}" wx:key="index">
+    <swiper-item>
+      <view  class="carInfo {{item.isWash?'isWash':''}}">
+        <!-- 姓名 -->
+        <view class="sheet  address">
+          <span class="caption">车主姓名:</span>
+          <view class="gut">
+            <span>{{item.name}}{{item.sexText}}</span>
+          </view>
+        </view>
+        <!-- 联系方式 -->
+        <view class="sheet">
+          <span class="caption">联系方式:</span>
+          <view class="gut">
+            <span>{{item.phone}}</span>
+          </view>
+        </view>
+
+        <!-- 颜色 -->
+        <view  class="sheet">
+          <span class="caption">车辆颜色:</span>
+          <view class="gut">
+            <span>{{item.colorText}}</span>
+          </view>
+        </view>
+
+        <!-- 车型 -->
+        <view  class="sheet">
+          <span class="caption">汽车车型:</span>
+          <view class="gut">
+            <span>{{item.carTypeText}}</span>
+          </view>
+        </view>
+
+        <!-- 品牌 -->
+        <view bindtap='getLocation' class="sheet">
+          <span class="caption">汽车品牌:</span>
+          <view class="gut">
+            <span>{{item.carBrand}}</span>
+          </view>
+        </view>
+
+        <!-- 牌号 -->
+        <view bindtap='getLocation' class="sheet">
+          <span class="caption">汽车牌号:</span>
+          <view bindtap="showNumEvent" class="gut">
+            <span>{{item.plateNumber}}</span>
+          </view>
+        </view>
+
+        <!-- 汽车图片 -->
+        <view bindtap='getLocation' class="sheet upCarImg">
+          <span class="caption">汽车图片:</span>
+          <view class="gut">
+            <van-image class="carImg" width="260rpx" height="200rpx" src="{{ baseURL+item.picture }}" radius="4" fit="cover"
+              lazy-load />
+          </view>
+          
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 暂无车辆 -->
+<view wx:if="{{carList.length==0}}" class="swiper">
+  <van-empty description="暂无车辆信息" />
+</view>
+<van-dialog id="van-dialog" />
+
+<view  wx:if="{{carList.length>0}}" class="btnList">
+  <view bindtap="toLink" data-url="addCarInfo" class="submit">新增</view>
+  <view bindtap="toEdit" data-url="addCarInfo"  class="submit">修改</view>
+  <view bindtap="deleteCar"  class="submit">删除</view>
+  <!-- <view bindtap="washCar"   class="submit washCar">清洗此车</view> -->
+</view>
+<view  wx:if="{{carList.length>0}}" class="btnList btnList2">
+  <view bindtap="washCar"   class="submit submit2">确定此车</view>
+</view>
+<view  wx:if="{{carList.length==0}}" class="btnList onlyAdd">
+  <view bindtap="toLink" data-url="addCarInfo" class="submit">新增</view>
+</view>

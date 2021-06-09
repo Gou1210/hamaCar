@@ -1,0 +1,25 @@
+page{
+  background: #F0F4F8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+  Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+  sans-serif;
+}
+#van-dialog button{
+  width: 100% !important;
+}
+.prompt{
+  position: absolute;
+  right: 20rpx;
+  bottom: 5px;
+ color: #EA0101;
+ font-size: 22rpx;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 

@@ -1,0 +1,12 @@
+/* pages/coupon/coupon.wxss */
+page {
+  background: #F0F4F8;
+}
+.content{
+  padding:30rpx ;
+  display: flex;
+  justify-content: center;
+}
+.youhui{
+  width:690rpx;
+}

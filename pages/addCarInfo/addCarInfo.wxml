@@ -1,0 +1,118 @@
+<view class="carInfo">
+
+  <!-- 姓名 -->
+  <view class="sheet  address">
+    <span class="caption">车主姓名:</span>
+    <view class="gut">
+      <input placeholder-class="place-holder" type="text" value="{{carForm.name}}" bindchange="changeName"
+        placeholder="请输入姓" />
+      <picker class="pullDown" bindchange="changeSex" value="{{value}}" range="{{sexArr}}">
+        <span wx:if="{{!carForm.sexText}}" class="name">性别</span>
+        <span wx:if="{{carForm.sexText}}" class="name">{{carForm.sexText}}</span>
+        <van-icon name="arrow-down" />
+      </picker>
+    </view>
+    <van-transition show="{{rules.isName }}" custom-class="block">
+      <text class="prompt name">请输入您的姓氏</text>
+    </van-transition>
+    <van-transition class="prompt sex" show="{{rules.isSex}}" custom-class="block">
+      <text>您的性别</text>
+    </van-transition>
+  </view>
+  <!-- 联系方式 -->
+  <view class="sheet">
+    <span class="caption">联系方式:</span>
+    <view class="gut">
+      <input type="number" placeholder-class="place-holder" bindchange="changePhone" 
+        value="{{carForm.phone}}" placeholder="请输入联系方式" />
+    </view>
+    <van-transition class="prompt" show="{{rules.isPhone }}" custom-class="block">
+      <text>请输入正确的手机号</text>
+    </van-transition>
+  </view>
+
+  <!-- 颜色 -->
+  <view bindtap='getLocation' class="sheet">
+    <span class="caption">车辆颜色:</span>
+    <view class="gut">
+      <picker bindchange="bindPickerColor" value="{{value}}" range="{{colorArr}}">
+        <view class="picker">
+          <span wx:if="{{!carForm.colorText}}" class="name">请选择您的车辆颜色</span>
+          <span wx:if="{{carForm.colorText}}" class="name">{{carForm.colorText}}</span>
+          <van-icon name="arrow" />
+        </view>
+      </picker>
+    </view>
+    <van-transition class="prompt" show="{{rules.isColor}}" custom-class="block">
+      <text>请选择您的车辆颜色</text>
+    </van-transition>
+  </view>
+
+  <!-- 车型 -->
+  <view bindtap='getLocation' class="sheet">
+    <span class="caption">汽车车型:</span>
+    <view class="gut">
+      <picker bindchange="bindPickerType" value="{{index}}" range="{{typeArr}}">
+        <view class="picker">
+          <span wx:if="{{!carForm.carTypeText}}" class="name">请选择您的车辆类型</span>
+          <span wx:if="{{carForm.carTypeText}}" class="name">{{carForm.carTypeText}}</span>
+          <van-icon name="arrow" />
+        </view>
+      </picker>
+    </view>
+    <van-transition class="prompt" show="{{rules.isCarType}}" custom-class="block">
+      <text>请选择您的车辆类型</text>
+    </van-transition>
+  </view>
+
+
+  <!-- 品牌 -->
+  <view bindtap='getLocation' class="sheet">
+    <span class="caption">汽车品牌:</span>
+    <view class="gut">
+      <input placeholder-class="place-holder" bindchange="changeBrand" type="text" value="{{carForm.carBrand}}"
+        placeholder="请输入您的汽车品牌" />
+    </view>
+    <van-transition class="prompt" show="{{rules.isBrand }}" custom-class="block">
+      <text>请输入您的汽车品牌</text>
+    </van-transition>
+  </view>
+
+  <!-- 牌号 -->
+  <view bindtap='getLocation' class="sheet">
+    <span class="caption">汽车牌号:</span>
+    <view bindtap="showNumEvent" class="gut">
+      <input disabled="true" placeholder-class="place-holder" type="text" value="{{carForm.plateNumber}}" placeholder="请输入汽车牌号" />
+    </view>
+    <van-transition class="prompt" show="{{rules.isNum }}" custom-class="block">
+      <text>请输入您的车牌号</text>
+    </van-transition>
+  </view>
+
+  <!--汽车图片 -->
+  <view bindtap='getLocation' class="sheet upCarImg">
+    <span class="caption">汽车图片:</span>
+    <view class="gut">
+      <van-uploader class="file" file-list="{{ fileList }}" bind:after-read="afterRead">
+        选择图片
+      </van-uploader>
+    </view>
+    <van-transition class="prompt carLocaton" show="{{rules.isPicture }}" custom-class="block">
+      <text>请选择您的车辆图片</text>
+    </van-transition>
+  </view>
+  <van-image class="carImg" width="360rpx" height="200rpx" src="{{baseURL+carForm.picture }}" radius="4" fit="cover"
+    lazy-load />
+
+  <!-- 车牌键盘 -->
+  <view class="showNum" wx:if="{{showNum}}">
+    <van-nav-bar title="{{carForm.plateNumber}}" safe-area-inset-top="{{false}}" style="padding-top:0;" left-text="取消"
+      right-text="确定" bind:click-left="closeNum" bind:click-right="closeNum" />
+    <vehicle-panel is-show="{{true}}" key-board-type="{{carForm.plateNumber.length < 1 ? 1 : 2}}" bindok="inputOk"
+      binddelete="inputdelete" bindinputchange="inputChange" backgroundColor="white" />
+  </view>
+
+
+</view>
+
+<view bindtap="commit" class="submit">提交</view>

@@ -1,0 +1,79 @@
+<view class="top">
+  <view wx:if="{{nickName}}" class="nickname">
+    <image mode="widthFix" class="head" src="{{avatarUrl}}"></image>
+    <span>{{nickName}}</span>
+  </view>
+  <view  wx:if="{{!nickName}}" class="nickname">
+    <image mode="widthFix" class="head" src="../../static/img/mine/touxiang.png" ></image>
+    <button class="loginBtn" bindtap="loginTap" >登录</button>
+  </view>
+</view>
+<view class="bottom">
+  <!-- 进程 -->
+<view class="tenor">
+<view bindtap="toLink" data-url='pendorder' class="tenorBox">
+  <!-- <view wx:if="{{totalArr[0].total!=0}}" class="number"></view> -->
+  <image mode="widthFix" src="../../static/img/mine/daijiedan.png"></image>
+  <p>待接单</p>
+</view>
+<view bindtap="toLink" data-url='serviceorder' class="tenorBox">
+  <!-- <view wx:if="{{totalArr[1].total!=0}}" class="number"></view> -->
+  <image mode="widthFix" src="../../static/img/mine/fuwuzhong.png"></image>
+  <p>服务中</p>
+</view>
+<view  bindtap="toLink" data-url='finishorder' class="tenorBox">
+  <!-- <view wx:if="{{totalArr[2].total!=0}}" class="number"></view> -->
+  <image mode="widthFix" src="../../static/img/mine/yiwancheng.png"></image>
+  <p>已完成</p>
+</view>
+<view bindtap="toLink" data-url='refundorder' class="tenorBox">
+  <!-- <view wx:if="{{totalArr[3].total!=0}}" class="number"></view> -->
+  <image mode="widthFix" src="../../static/img/mine/yijiekuan.png"></image>
+  <p>已退款</p>
+</view>
+</view>
+<!-- 进程结束 -->
+
+<!-- 服务选择 -->
+<view class="give">
+<view bindtap="toLink" data-url="coupon" class="giveBox">
+  <view class="left">
+    <image class="tubiao" src="../../static/img/mine/youhui.png"></image>
+  <p>我的优惠券</p>
+  </view>
+
+  <image mode="widthFix" class="arrow" src="../../static/img/mine/back.png"></image>
+</view>
+<view bindtap="toLink" data-url="carInfo" class="giveBox">
+  <view class="left">
+  <image class="tubiao" src="../../static/img/mine/cheliang.png"></image>
+  <p>车辆信息</p>
+  </view>
+  <image mode="widthFix" class="arrow" src="../../static/img/mine/back.png"></image>
+</view>
+<view bindtap="toLink" data-url="parkInfo" class="giveBox">
+  <view class="left">
+  <image class="tubiao" class="run" src="../../static/img/mine/run.png"></image>
+  <p>车位信息</p>
+  </view>
+  <image mode="widthFix" class="arrow" src="../../static/img/mine/back.png"></image>
+</view>
+<view class="giveBox">
+  <view class="left">
+  <image class="tubiao" src="../../static/img/mine/lianxi.png"></image>
+  <button class="contact" open-type="contact">在线客服</button>
+  </view>
+  <image mode="widthFix" class="arrow" src="../../static/img/mine/back.png"></image>
+</view>
+<view class="giveBox lastGive">
+  <view class="left">
+  <image class="tubiao phone" src="../../static/img/mine/phone.png"></image>
+  <p class="kefudianhua" bindtap="toPhone">客服电话</p>
+  </view>
+  <image mode="widthFix" class="arrow" src="../../static/img/mine/back.png"></image>
+</view>
+</view>
+
+<!-- 退出登录 -->
+<view wx:if="{{nickName}}" bindtap="quit" class="quit">退出登录</view>
+</view>

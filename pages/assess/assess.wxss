@@ -1,0 +1,231 @@
+page {
+  background: #F0F4F8;
+}
+
+.orderList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.orderBox {
+  margin-top: 30rpx;
+  width: 660rpx;
+  height: 253rpx;
+  background: #FFFFFF;
+  border-radius: 50rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.orderBox .top {
+  height: 34rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orderBox .top .left {
+  display: flex;
+}
+
+.orderBox .top .left .conditionBtn {
+  width: 119rpx;
+  height: 46rpx;
+  background: #F0D208;
+  border-radius: 15rpx;
+  font-size: 25rpx;
+  text-align: center;
+  line-height: 46rpx;
+}
+
+.orderBox .top .left .washPattern .title {
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+}
+
+.orderBox .top .left .washPattern {
+  margin-left: 20rpx;
+}
+
+.orderBox .top .left .washPattern .time {
+  color: #999999;
+  font-size: 26rpx;
+}
+
+.orderBox .top image {
+  width: 15rpx;
+  height: 23rpx;
+}
+
+.orderBox .middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.orderBox .middle .left {
+  display: flex;
+}
+
+.orderBox .middle .left .brand {
+  color: #F0D208;
+  margin-right: 10rpx;
+  height: 100%;
+  line-height: 100%;
+}
+
+.orderBox .middle .left .address {
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999999;
+  font-size: 25rpx;
+  height: 100%;
+  line-height: 100%;
+}
+
+.orderBox .middle .price {
+  color: #F33B36;
+}
+
+.orderBox .bottom {
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999999;
+}
+
+.orderBox .bottom p {
+  margin-right: 20rpx;
+  font-size: 26rpx;
+}
+
+.connect {
+  width: 660rpx;
+  position: relative;
+}
+
+.connect .one {
+  width: 26rpx;
+  height: 64rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 9px;
+  position: absolute;
+  left: 60rpx;
+  top: -10rpx;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #d3d3d3;
+}
+
+.connect .two {
+  width: 26rpx;
+  height: 64rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 9px;
+  position: absolute;
+  right: 60rpx;
+  top: -10rpx;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #d3d3d3;
+}
+
+.assessBox {
+  width: 660rpx;
+  height: 547rpx;
+  background: #FFFFFF;
+  border-radius: 50rpx;
+  padding: 30rpx;
+  margin-top: 44rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.starText {
+  display: flex;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999999;
+  font-size: 26rpx;
+}
+
+.starText span {
+  margin-right: 40rpx;
+}
+
+.starText .xingjipingjia {
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #000000;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+
+.starHama {
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999999;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+}
+
+.starXichexia .title {
+  margin-right: 46rpx;
+}
+
+.starXichexia {
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999999;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+}
+
+.starHama .title {
+  margin-right: 20rpx;
+}
+
+.assessTitle {
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #000000;
+  font-size: 30rpx;
+}
+
+.assessInput {
+  width: 630rpx;
+  height: 225rpx;
+  background: #F0F4F8;
+  border-radius: 50rpx;
+  margin: 0 auto;
+}
+
+
+.assessText .van-cell {
+  width: 630rpx;
+  height: 225rpx;
+  background: #F0F4F8;
+  border-radius: 50rpx;
+  background-color: #F0F4F8;
+  margin: 0 auto;
+}
+.submit {
+  width: 560rpx;
+  height: 88rpx;
+  background: #F0D208;
+  border-radius: 25rpx;
+  line-height: 88rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}

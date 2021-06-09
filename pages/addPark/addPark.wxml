@@ -1,0 +1,27 @@
+<view class="addCar">
+  <view  class="addBox">
+    <view bindtap='getLocation' class="sheet  address">
+          <span class="caption">车位所在区域:</span>
+          <input class="gut" type="text" value="{{parkForm.locationArea}}" placeholder="请选择地点" />
+          <van-transition class="prompt one" show="{{rules.isAddressName }}" custom-class="block">
+      <text >请选择您的地址</text>
+</van-transition>
+        </view>
+    <view class="sheet  address">
+          <span class="caption">车位所在区域:</span>
+          <view class="pullDown">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{topBottom}}">
+              <view class="picker">
+                <span class="name">{{parkForm.locationFloor}}</span>
+                <van-icon size="20rpx" color="999" name="arrow-down" />
+              </view>
+            </picker>
+          </view>
+          <input bindinput="changeSiteSpecific" class="gut siteInput" type="text" value="{{parkForm.locationDetail}}" placeholder="车位号或详细地址" />
+        </view>
+        <van-transition class="prompt two" show="{{rules.isSiteSpecific }}" custom-class="block">
+      <text >车位号或详细地址</text>
+</van-transition>
+      </view>
+      <view bindtap="addPark" class="submit">添加车位</view>
+</view>

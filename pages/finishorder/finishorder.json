@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "enablePullDownRefresh": true,
+  "enableReachBottom": true,
+  "onReachBottomDistance":0,
+  "navigationBarTitleText": "已完成"
+}

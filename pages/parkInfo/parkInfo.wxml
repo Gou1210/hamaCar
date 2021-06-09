@@ -1,0 +1,33 @@
+<view wx:if="{{parkInfoData.length>0}}" class="addCar">
+  <view wx:for="{{parkInfoData}}" wx:key="index" class="addBox">
+    <view class="sheet  address">
+          <span class="caption">车位所在区域:</span>
+          <view class="gut">
+            <span>{{item.locationArea}}</span>
+          </view>
+        </view>
+    <view class="sheet  address">
+          <span class="caption">车位所在区域:</span>
+          <view class="gut">
+            <span class="locationFloor">{{item.locationFloor}}</span>
+            <span>{{item.locationDetail}}</span>
+          </view>
+        </view>
+        <view bindtap="handleItemChange" data-addressId="{{item.addressId}}"  data-index="{{index}}" class="circle {{item.isActive?'active':''}}">
+    √
+  </view>
+  </view>
+</view>
+<view wx:if="{{parkInfoData.length==0}}" class="addCar">
+  <van-empty description="暂无车位信息" />
+</view>
+
+<van-dialog id="van-dialog" />
+<view class="btnList">
+  <view bindtap="toLink" data-url="addPark" class="submit">新增</view>
+<view bindtap="toEdit" data-url="addPark"  class="submit">修改</view>
+<view bindtap="deleteCar" class="submit">删除</view>
+</view>
+<view class="btnList btnList2">
+  <view bindtap="usereCar"  class="submit submit2">使用此位置</view>
+</view>

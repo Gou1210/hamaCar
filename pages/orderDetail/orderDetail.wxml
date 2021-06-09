@@ -1,0 +1,63 @@
+<view class="orderList">
+  <view class="orderBox">
+  <view class="top">
+    <view class="left">
+    <view wx:if="{{orderForm.orderStatus==1}}" class="conditionBtn">等待接单</view>
+    <view wx:if="{{orderForm.orderStatus==2}}" class="conditionBtn">已接单</view>
+    <view wx:if="{{orderForm.orderStatus==3}}" class="conditionBtn">洗车中</view>
+    <view wx:if="{{orderForm.orderStatus==4}}" class="conditionBtn">已洗完</view>
+    <view wx:if="{{orderForm.orderStatus==5}}" class="conditionBtn">已完成</view>
+   <p class="washPattern" ><span class="title">{{orderForm.orderType=='1'?'快捷洗车':'智能柜洗车'}}</span><span class="time">（{{orderForm.createTime}}）</span></p>
+  </view>
+  <!-- <image src="../../static/img/mine/back.png"></image> -->
+  </view>
+
+  <view class="middle">
+    <view class="left">
+    <view class="brand">{{orderForm.plateNumber}}</view>
+   <p class="address">洗车地点：{{orderForm.locationArea}}</p>
+  </view>
+  <p class="price">¥{{orderForm.price}}</p>
+  </view>
+
+  <view class="bottom">
+    <p class="carType">车辆类型：{{orderForm.carTypeText}}</p>
+    <p class="washType">洗护类型：{{orderForm.washProtectName}}</p>
+    <p bindtap="cancelOrder" wx:if="{{orderForm.orderStatus==1}}"  class="cancel">点此取消订单</p>
+    <p bindtap="getKey" wx:if="{{orderForm.orderStatus==4&&orderForm.orderType==2}}"  class="cancel">取出钥匙</p>
+    <p bindtap="finishOrder" wx:if="{{orderForm.orderStatus==4}}"  class="cancel">结束订单</p>
+  </view>
+  <view class="bottom">
+    <p wx:if="{{orderForm.phone}}" bindtap="contactMaster" class="washType phone">联系洗车侠</p>
+  </view>
+</view>
+</view>
+<view wx:if="{{orderForm.orderStatus!=1&&orderForm.orderStatus!=7}}" class="pictureBox">
+<text class="picText">
+  取车车辆照片：
+</text>
+<view  class="takeList">
+<view wx:for="{{beforeImgList}}" wx:key="item" class="picOne">
+  <image  src="{{baseURL+item.img}}" />
+<text>{{item.title}}</text>
+</view>
+
+<text class="describe">*详情描述：车辆一切情况正常</text>
+</view>
+
+<text class="picText">
+  还车车辆照片：
+</text>
+<view class="takeList">
+  <view wx:for="{{afterImgList}}" wx:key="item" class="picOne">
+  <image  src="{{baseURL+item.img}}" />
+<text>{{item.title}}</text>
+</view>
+
+
+<text class="describe">*详情描述：车辆一切情况正常</text>
+</view>
+
+</view>
+
+

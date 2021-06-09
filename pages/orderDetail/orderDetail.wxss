@@ -1,0 +1,164 @@
+page {
+  background: #F0F4F8;
+}
+
+.orderList {
+  display: flex;
+  justify-content: center;
+}
+
+.orderBox {
+  margin-top: 30rpx;
+  width: 660rpx;
+  height: 253rpx;
+  background: #FFFFFF;
+  border-radius: 50rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.orderBox .top {
+  height: 34rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orderBox .top .left {
+  display: flex;
+}
+
+.orderBox .top .left .conditionBtn {
+  width: 119rpx;
+  height: 46rpx;
+  background: #F0D208;
+  border-radius: 15rpx;
+  font-size: 25rpx;
+  text-align: center;
+  line-height: 46rpx;
+}
+
+.orderBox .top .left .washPattern .title {
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+}
+
+.orderBox .top .left .washPattern {
+  margin-left: 20rpx;
+}
+
+.orderBox .top .left .washPattern .time {
+  color: #999999;
+  font-size: 28rpx;
+}
+
+.orderBox .top image {
+  width: 15rpx;
+  height: 23rpx;
+}
+
+.orderBox .middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.orderBox .middle .left {
+  display: flex;
+}
+
+.orderBox .middle .left .brand {
+  color: #F0D208;
+  margin-right: 10rpx;
+  height: 100%;
+  line-height: 100%;
+}
+
+.orderBox .middle .left .address {
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999999;
+  font-size: 25rpx;
+  height: 100%;
+  line-height: 100%;
+}
+
+.orderBox .middle .price {
+  color: #F33B36;
+}
+
+.orderBox .bottom {
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999999;
+}
+
+.orderBox .bottom p {
+  margin-right: 20rpx;
+  font-size: 26rpx;
+}
+
+.pictureBox {
+  margin: 0 auto;
+  margin-top: 30rpx;
+  padding: 30rpx;
+  width: 630rpx;
+  height: 1260rpx;
+  background: #FFFFFF;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.picText {
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #333333;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+.takeList{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+.picOne {
+  width: 131rpx;
+  height: 220rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  color: #999999;
+  font-size: 28rpx;
+}
+.describe{
+  color: #F33B36;
+  font-size: 26rpx;
+}
+.pictureBox image {
+  width: 131rpx;
+  height: 113rpx;
+  background: #F0F4F8;
+  border-radius: 30rpx;
+}
+.orderBox .bottom .cancel {
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #F33B36;
+}
+.phone{
+  color: #F33B36;
+}

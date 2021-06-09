@@ -1,0 +1,11 @@
+<view class="tabs">
+  <view class="tabs_title">
+    <view class="title_item {{status==0?'active':''}}" data-status="0" bindtap="hanldeItemTap">
+      定位洗车
+    </view>
+    <view>
+      <image mode="widthFix" class="logo" src="/static/img/home/logo.png" />
+    </view>
+    <view class="title_item {{status==1?'active':''}}" data-status="1" bindtap="hanldeItemTap">智能柜洗车</view>
+  </view>
+</view>
